@@ -15,38 +15,26 @@ backBtn.addEventListener("click", function() {
         behavior: "smooth"
     });
 })
-// CLICK STAR EFFECT
-document.addEventListener("click", function(e) {
+document.addEventListener("click", function (event) {
+  for (let i = 0; i < 6; i++) {
+    const star = document.createElement("span");
 
-    const stars = ["✦", "✧", "★", "✶", "✷"];
+    star.textContent = "✦";
+    star.className = "click-star";
 
-    for (let i = 0; i < 5; i++) {
+    star.style.left = event.clientX + "px";
+    star.style.top = event.clientY + "px";
 
-        const star = document.createElement("span");
+    const x = (Math.random() - 0.5) * 120;
+    const y = (Math.random() - 0.5) * 120;
 
-        star.innerHTML =
-            stars[Math.floor(Math.random() * stars.length)];
+    star.style.setProperty("--x", x + "px");
+    star.style.setProperty("--y", y + "px");
 
-        star.classList.add("click-star");
+    document.body.appendChild(star);
 
-        star.style.left = e.clientX + "px";
-        star.style.top = e.clientY + "px";
-
-        star.style.setProperty(
-            "--move-x",
-            (Math.random() - 0.5) * 120 + "px"
-        );
-
-        star.style.setProperty(
-            "--move-y",
-            (Math.random() - 0.5) * 120 + "px"
-        );
-
-        document.body.appendChild(star);
-
-        setTimeout(() => {
-            star.remove();
-        }, 900);
-    }
-
+    setTimeout(() => {
+      star.remove();
+    }, 800);
+  }
 });
