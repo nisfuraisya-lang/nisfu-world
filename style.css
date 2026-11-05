@@ -407,3 +407,30 @@ footer {
             scale(1.8) rotate(180deg);
     }
 }
+.click-star {
+  position: fixed;
+  z-index: 99999;
+  color: #00f7ff;
+  font-size: 22px;
+  pointer-events: none;
+  text-shadow:
+    0 0 5px #00f7ff,
+    0 0 15px #00f7ff,
+    0 0 25px #a855f7;
+  animation: star-pop 0.8s ease-out forwards;
+}
+
+@keyframes star-pop {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.3);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(
+      calc(-50% + var(--x)),
+      calc(-50% + var(--y))
+    ) scale(1.8) rotate(180deg);
+  }
+}
