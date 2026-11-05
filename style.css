@@ -434,3 +434,154 @@ footer {
     ) scale(1.8) rotate(180deg);
   }
 }
+/* PROFILE SECTION */
+
+.profile-section {
+  padding: 100px 8%;
+  position: relative;
+  overflow: hidden;
+  background: rgba(5, 10, 25, 0.5);
+}
+
+.profile-heading {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.section-tag {
+  color: #00eaff;
+  letter-spacing: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.profile-heading h2 {
+  font-size: clamp(35px, 7vw, 65px);
+  color: white;
+  margin: 15px 0;
+  letter-spacing: 5px;
+}
+
+.profile-heading h2 span {
+  color: #00eaff;
+  text-shadow: 0 0 20px #00eaff;
+}
+
+.profile-container {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 45px;
+  align-items: center;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.profile-photo {
+  position: relative;
+  border: 1px solid #00eaff;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 234, 255, 0.25);
+  animation: photoFloat 4s ease-in-out infinite;
+}
+
+.profile-photo img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.profile-info h3 {
+  color: white;
+  font-size: clamp(22px, 4vw, 35px);
+  margin: 12px 0;
+  text-shadow: 0 0 15px #00eaff;
+}
+
+.student-status {
+  color: #a855f7;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+}
+
+.profile-detail {
+  margin: 22px 0;
+  padding-left: 15px;
+  border-left: 2px solid #00eaff;
+}
+
+.profile-detail span {
+  color: #00eaff;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.profile-detail p {
+  color: #d4e5f5;
+  line-height: 1.8;
+  margin-top: 7px;
+}
+
+.interest-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 65px auto 0;
+}
+
+.interest-card {
+  padding: 25px;
+  background: rgba(15, 25, 50, 0.8);
+  border: 1px solid rgba(0, 234, 255, 0.35);
+  border-radius: 12px;
+  transition: 0.4s;
+}
+
+.interest-card:hover {
+  transform: translateY(-10px);
+  border-color: #00eaff;
+  box-shadow: 0 0 25px rgba(0, 234, 255, 0.3);
+}
+
+.interest-card span {
+  color: #a855f7;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.interest-card h3 {
+  color: #00eaff;
+  margin: 15px 0;
+}
+
+.interest-card p {
+  color: #d4e5f5;
+  line-height: 1.7;
+}
+
+@keyframes photoFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@media (max-width: 700px) {
+  .profile-container {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-photo {
+    max-width: 300px;
+    margin: auto;
+  }
+
+  .interest-grid {
+    grid-template-columns: 1fr;
+  }
+}
