@@ -478,11 +478,26 @@ footer {
 
 .profile-photo {
   position: relative;
-  border: 1px solid #00eaff;
+  max-width: 350px;
+  margin: auto;
   padding: 10px;
-  border-radius: 15px;
-  box-shadow: 0 0 25px rgba(0, 234, 255, 0.25);
+  border: 1px solid #00eaff;
+  border-radius: 20px;
+  background: rgba(0, 234, 255, 0.05);
+  box-shadow:
+    0 0 20px #00eaff55,
+    0 0 45px #a855f733;
   animation: photoFloat 4s ease-in-out infinite;
+}
+
+.profile-photo img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+  position: relative;
+  z-index: 1;
 }
 
 .profile-photo img {
